@@ -1,0 +1,691 @@
+/*html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+*/
+
+/*styles from college site asp.net*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-family);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --text-color: #fff;
+    --font-light: 300;
+    --font-bold: 600;
+    --font-family: 'Roboto', sans-serif;
+    --font-heading: 2.2rem;
+    --font-sub-heading: 1.2rem;
+    --font-para: 1rem;
+    --btn-color: hsl(350, 78%, 30%);
+    --btn-background: #fff;
+}
+
+body {
+    background: #000;
+    font-family: var(--font-family);
+    color: var(--text-color);
+}
+
+button svg {
+    fill: var(--btn-color);
+    position: absolute;
+    top: 17px;
+}
+
+.txt-sub-heading {
+    font-size: var(--font-sub-heading);
+}
+
+.txt-para {
+    font-size: var(--font-para);
+}
+
+.btn-beats {
+    position: relative;
+    background: var(--btn-background);
+    color: var(--btn-color);
+    font-size: var(--font-sub-heading);
+    border: none;
+    border-radius: 0.25rem;
+    padding: 1rem;
+    width: 16rem;
+    transition: all 0.4s ease-in;
+}
+
+    .btn-beats:hover {
+        background-color: var(--btn-color);
+        color: var(--btn-background);
+    }
+
+        .btn-beats:hover svg {
+            fill: var(--btn-background);
+        }
+.nav-contianer {
+    width: 100% !important;
+}
+.nav ul.top-nav {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    min-height: 60px;
+    overflow: hidden;
+    background-color: #881125;
+    width: 100% !important;
+}
+
+.nav ul.top-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+    .nav ul.top-nav li {
+        flex: 1;
+        text-align: center;
+        border-radius: 0;
+    }
+
+.top-nav li a {
+    display: block;
+    height: 100%;
+    width: 100%;
+    padding: 1rem;
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.nav ul.top-nav li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    font-weight: var(--font-bold);
+    font-size: 1.5rem;
+}
+
+.nav ul.top-nav li.txt-heading a {
+    font-size: var(--font-heading);
+}
+
+.section-1 {
+    position: relative;
+    background: url('../Images/home-main-1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 90vh;
+}
+
+    .section-1 .content {
+        position: absolute;
+        padding: 0.5rem;
+        top: 30%;
+        left: 12%;
+    }
+
+.section-2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+    .section-2 .banners {
+        height: 500px;
+        width: 25%;
+        position: relative;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        overflow: hidden;
+    }
+
+        .section-2 .banners.banner-one {
+            background-image: url('../Images/home-part-1.jpg');
+        }
+
+        .section-2 .banners.banners.banner-one::before {
+            content: "";
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            background-color: hsl(198, 94%, 14%);
+            opacity: 0.8;
+            z-index: 1;
+        }
+
+        .section-2 .banners.banner-two {
+            background-image: url('../Images/home-part-2.jpg');
+        }
+
+        .section-2 .banners.banners.banner-two::before {
+            content: "";
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            background-color: hsl(57, 66%, 22%);
+            opacity: 0.8;
+            z-index: 1;
+        }
+
+        .section-2 .banners.banner-three {
+            background-image: url('../Images/home-part-3.jpg');
+        }
+
+        .section-2 .banners.banners.banner-three::before {
+            content: "";
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            background-color: hsl(198, 86%, 27%);
+            opacity: 0.8;
+            z-index: 1;
+        }
+
+        .section-2 .banners.banner-four {
+            background-image: url('../Images/home-part-4.jpg');
+        }
+
+        .section-2 .banners.banners.banner-four::before {
+            content: "";
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            background-color: hsl(349, 98%, 18%);
+            opacity: 0.8;
+            z-index: 1;
+        }
+
+    .section-2 .banners {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+        .section-2 .banners .banner-content {
+            position: absolute;
+            color: var(--text-color);
+            text-align: center;
+            z-index: 2;
+        }
+
+            .section-2 .banners .banner-content p {
+                padding: 0.5rem;
+                letter-spacing: 2px;
+                line-height: 20px;
+            }
+
+            .section-2 .banners .banner-content hr {
+                width: 80%;
+            }
+
+.btn-banner {
+    width: 65%;
+    height: 40px;
+    font-size: 0.8rem;
+}
+
+.section-3 {
+    height: 75vh;
+    width: 100%;
+    max-height: 660px;
+    position: relative;
+    margin-top: 2rem;
+    background: url('../Images/main-2.jpg');
+    opacity: 0.9;
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+}
+
+    .section-3 .content {
+        position: absolute;
+        bottom: 15px;
+        left: 5%;
+    }
+
+        .section-3 .content h1 {
+            font-size: var(--font-heading);
+        }
+
+            .section-3 .content h1:hover {
+                text-decoration: underline;
+            }
+
+        .section-3 .content p.para {
+            font-size: var(--font-sub-heading);
+        }
+
+.section-4 {
+    background-color: #fff;
+    height: 75vh;
+    width: 100%;
+    padding: 1rem;
+}
+
+    .section-4 .news-container {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 1rem;
+    }
+
+        .section-4 .news-container .news-items {
+            width: calc(50% - 1rem);
+            display: flex;
+            align-items: center;
+        }
+
+            .section-4 .news-container .news-items p {
+                color: var(--btn-color);
+                font-size: var(--font-sub-heading);
+                padding: 1.5rem;
+                text-align: left;
+            }
+
+                .section-4 .news-container .news-items p:hover {
+                    text-decoration: underline;
+                }
+
+            .section-4 .news-container .news-items img {
+                height: auto;
+                width: 100%;
+                max-width: 230px;
+                object-fit: cover;
+                object-position: center;
+            }
+
+.newsbutton {
+    text-align: right;
+}
+
+    .newsbutton .new.btn-beats {
+        background-color: hsl(195, 61%, 46%);
+        color: var(--btn-background);
+    }
+
+.footer {
+    height: 45vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #999;
+}
+
+    .footer .wrapper {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        letter-spacing: 2px;
+        line-height: 20px;
+    }
+
+        .footer .wrapper ul {
+            list-style: none;
+        }
+
+            .footer .wrapper ul li a {
+                color: #999;
+                letter-spacing: 2px;
+                line-height: 20px;
+            }
+
+    .footer a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        color: var(--btn-background);
+    }
+
+/*Styles for home page ends*/
+
+
+/*Styles for login/register logic*/
+
+.login-container {
+    background: #fff !important;
+    color: #000 !important;
+    height: 90vh;
+    padding: 0.8rem !important;
+}
+
+.addTeacher-container.login-container {
+    height: auto;
+}
+
+.view-attendance {
+    flex-direction: row !important;
+}
+
+.attendance-container {
+    min-height: 90vh !important;
+}
+
+.registration-container {
+    min-height: 100vh !important;
+}
+
+.login-container .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+    .login-container .container div {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+        .login-container .container div.terms-policy {
+            display: block;
+        }
+
+            .login-container .container div.terms-policy label,
+            .container div.terms-policy input {
+                width: auto !important;
+                height: auto !important;
+            }
+
+    .login-container .container div {
+        width: 100%;
+        padding: 1.0rem;
+    }
+
+        .login-container .container div label,
+        .container div input {
+            width: 50%;
+            height: 30px;
+        }
+
+        .login-container .container div input, .login-container .container div .txtBox {
+            height: 50px;
+            background-color: #f1f1f1 !important;
+            border: none;
+            font-size: 1rem;
+            transition: all 0.5s ease;
+        }
+
+            .login-container .container div input:active,
+            .container div input:focus,
+            .container div input:focus-visible {
+                border: none !important;
+                outline: none;
+                background-color: #ddd !important;
+            }
+
+    .login-container .container .btn-register, .login-container .container .btn-login {
+        height: 45px;
+        width: 50%;
+        color: #fff;
+        background-color: #881125 !important;
+        border: none;
+        text-align: center;
+        vertical-align: middle;
+        transition: all 0.5s ease;
+    }
+
+    .login-container .container input[type="checkbox"] {
+        color: #000;
+    }
+
+    .login-container .container .btn-login {
+        margin-top: 1.5rem;
+        border-radius: 0.5rem;
+    }
+
+    .login-container .container div input,
+    .login-container .container input, .login-container .container div .txtBox {
+        border-radius: 0.5rem;
+    }
+
+    .login-container .container div.bottom-connection {
+        flex-direction: row !important;
+    }
+/*Styles for login/register logic ends*/
+
+/*styles for alerts*/
+
+.alert {
+    height: 45px;
+    width: 250px;
+    text-align: center;
+    line-height: 30px;
+    padding: 7px;
+    border-radius: 8px;
+    margin: 8px;
+}
+
+.alert-success {
+    color: green;
+    background-color: lightgreen;
+}
+
+.alert-danger {
+    color: red;
+    background-color: lightgray;
+}
+
+.alert.alert-danger.lbl-mail {
+    width: fit-content;
+}
+
+/*styles for alerts ends*/
+
+/*style for table view begins*/
+.tbl.tbl-addClass {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    margin: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+    .tbl.tbl-addClass th {
+        color: #fff;
+        background-color: #881125;
+        padding: 12px 15px;
+        text-align: left;
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    .tbl.tbl-addClass tbody tr {
+        border-bottom: 1px solid #dddddd;
+    }
+
+        .tbl.tbl-addClass tbody tr:nth-of-type(even) {
+            background-color: #f9f9f9;
+        }
+
+        .tbl.tbl-addClass tbody tr:last-of-type {
+            border-bottom: 2px solid #4CAF50;
+        }
+
+    .tbl.tbl-addClass td {
+        padding: 12px 15px;
+        font-size: 14px;
+        color: #333;
+    }
+
+    .tbl.tbl-addClass tbody tr:hover {
+        background-color: #f1f1f1;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .tbl.tbl-addClass tbody td:hover {
+        background-color: #e0e0e0;
+        transition: background-color 0.3s ease;
+    }
+
+    .tbl.tbl-addClass tbody tr td:first-child {
+        border-top-left-radius: 8px;
+        border-bottom-left-radius: 8px;
+    }
+
+    .tbl.tbl-addClass tbody tr td:last-child {
+        border-top-right-radius: 8px;
+        border-bottom-right-radius: 8px;
+    }
+
+/*styles for table view ends*/
+
+/*styles for radio button and chk box*/
+
+span.radio-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+    span.radio-container input {
+        width: 25px !important;
+        height: 25px !important;
+    }
+
+    span.radio-container label {
+        padding: 0.5rem !important;
+        line-height: 15px !important;
+    }
+
+.addTeacher-container.login-container.attendance-container .container .tbl-container table tbody tr td span input {
+    height: 20px;
+    width: 100%;
+}
+
+/*styles for radion button ends and chk box*/
+
+/*styles for side Nav*/
+
+.side-nav {
+    width: 250px;
+    height: 100vh;
+    background-color: #881125;
+    position: fixed;
+    top: 74px;
+    left: -250px; /* Hide by default */
+    transition: left 0.3s ease;
+    z-index: 1000;
+}
+
+    .side-nav ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        padding-top: 60px;
+    }
+
+        .side-nav ul li {
+            padding: 15px 20px;
+            transition: background-color 0.3s ease;
+        }
+
+            .side-nav ul li a {
+                color: #fff;
+                text-decoration: none;
+                display: block;
+            }
+
+            .side-nav ul li:hover {
+                background-color: rgba(255, 255, 255, 0.1);
+            }
+
+    /* Show Side Nav when toggled */
+    .side-nav.active {
+        left: 0;
+    }
+
+/*styles for side nav ends*/
+
+/*styles for login page*/
+
+.login-container.login {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+    .login-container.login div.controls-container {
+        flex: 1;
+    }
+
+        .login-container.login div.controls-container .container input.btn-login {
+            width: 100%;
+        }
+
+    .login-container.login div.image-container {
+        flex: 1;
+        height: 70vh;
+        width: 50%;
+        background: url('../Images/login.jpg') no-repeat center center;
+        background-size: contain;
+    }
+/*style for login page ends*/
+
+/*style for logout button*/
+
+.side-nav ul li:last-child:hover {
+    background-color: #881125 !important;
+}
+
+.side-nav ul li .btn-logout {
+    color: #881125;
+    background-color: #fff;
+    height: 40px;
+    width: 100px;
+    margin: 10px 0px 0px 35px;
+    border: none;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+    .side-nav ul li .btn-logout:hover {
+        background-color: #881125;
+        color: #fff;
+        border: 1px solid #fff;
+    }
+
+/*style for logout button ends*/
+
+.container form {
+    width: 65%;
+}
+
+form.add-cotainer{
+    width: 100%;
+}

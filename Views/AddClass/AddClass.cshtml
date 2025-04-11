@@ -1,0 +1,38 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@model CollegeSiteMVC.Models.AddClassModel
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <div class="addClass-container login-container">
+            <h2>Add New Class</h2>
+            <div class="container">
+            <form asp-controller="AddClass" asp-action="InsertClass" class="add-cotainer">
+
+                    <div class="txtBox-container">
+                        <label for="txtClass">Class Name</label>
+                        <!-- <asp:TextBox ID="txtClass" runat="server" CssClass="txtBox txt-AddClass" placeholder="Enter Class Name"></asp:TextBox>-->
+                    <input type="text" id="txtClass" name="ClassName" class="txtBox txt-AddClass" placeholder="Enter Class Name" />
+                        <span class="msg-validation" style="color: red; display: none;">Please enter a class name</span>
+                    </div>
+                    <button id="btnAddClass" type="submit" class="btn-login btn-AddClass">Add Class</button>
+                    <span class="msg-validation-addClass" style="color: red;">
+                        @Html.ValidationMessage("AddClass")
+                    </span>
+                </form>
+                 <!-- <asp:Label ID="lblMsg" runat="server"></asp:Label> -->
+                <div class="tbl-container">
+                    <!-- <asp:GridView ID="tblAddClass" runat="server" CssClass="tbl tbl-addClass" EmptyDataText="No Record to display"></asp:GridView> -->
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

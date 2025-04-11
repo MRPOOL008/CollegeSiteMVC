@@ -1,0 +1,56 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+
+@model CollegeSiteMVC.Models.AddUserModel
+
+
+<!DOCTYPE html>
+<html>
+    <head><title></title></head>
+    <body>
+        <div class="login-container registration-container">
+            <h1>Registration Form: </h1>
+            <div class="container">
+            <form asp-controller="AddUser" asp-action="RegisterUser" class="add-cotainer">
+                    <div class="txtEmail-container">
+                        <label for="txtEmail">Email</label>
+                        <input type="text" id="txtEmail" name="UserName" class="txtBox txt-name" placeholder="Enter your Email" /> 
+                        <span class="msg-validation-email" style="color: red; display: none;">Please enter a proper user email</span>
+                    </div>
+                    <div class="txtPassword-container">
+                        <label for="txtPassword">Password</label>
+                        <input type="text" id="txtPassword" name="Password" class="txtBox txt-name" placeholder="Enter your password" />
+                        <span class="msg-validation-password" style="color: red; display: none;">Please enter a password</span>
+                    </div>
+                    <div class="txtPassword-container">
+                        <label for="txtPasswordRe">Password</label>
+                        <input type="text" id="txtPasswordRe" name="RePassword" class="txtBox txt-name" placeholder="Enter your password" />
+                        <span class="msg-validation-rePassword" style="color: red; display: none;">Please re-enter the password</span>
+                    </div>
+                    <div class="user-role">
+                        <select id="ddlUserRole" name="UserRole" class="txtBox">
+                            <option>Admin</option>
+                            <option>Teacher</option>
+                            <option>Student</option>
+                        </select>
+                    </div>
+                    <div class="terms-policy">
+                        <input type="checkbox" name="terms-policy" id="terms-policy" checked />
+                        <label for="terms-policy">By creating an account you agree to our Terms & Conditions.</label>
+                    </div>
+                    <button id="btnAddUser" type="submit" class="btn-login btn-add">Add User</button>
+                    <span class="msg-validation-addUser" style="color: red;">
+                        @Html.ValidationMessage("AddUser")
+                    </span>
+                    <!-- <div class="bottom-connection">
+                        Already have an account? &nbsp;<a href="Login.aspx">Login Now</a>
+                    </div> -->
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

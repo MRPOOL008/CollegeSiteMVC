@@ -1,0 +1,55 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    Layout = null;
+}
+
+@model CollegeSiteMVC.Models.LoginModel
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+        <title>
+            Beats Login
+        </title>
+    <link rel="stylesheet" href="~/css/site.css"/>
+    
+    <script src="~/lib/jquery/jquery.js" asp-append-version="true"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    </head>
+    <body>
+        <div class="login-container login">
+            <div class="image-container">
+            </div>
+            <div class="controls-container">
+                <h1>Login: </h1>
+                <form asp-controller="Login" asp-action="login"> 
+                    <div class="container">
+                        <div class="email" id="inputEmail">
+                            <label for="txtEmail">Email:</label>
+                        <input type="text" name="email" id="txtEmail" placeholder="Please enter you email" asp-for="Email" />
+                            <span class="msg-validation-email" style="color: red; display: none;">Please enter a proper user email</span>
+                            <!-- <asp:TextBox ID="txtEmail" runat="server" required></asp:TextBox> -->
+                        </div>
+                        <div class="password">
+                            <label for="txtPassword">Password:</label>
+                        <input type="password" name="password" id="txtPassword" placeholder="enter password" asp-for="Password" />
+                            <span class="msg-validation-password" style="color: red; display: none;">Please enter a password</span>
+                            <!--<asp:TextBox ID="txtPassword" TextMode="Password" runat="server" required></asp:TextBox> -->
+                        </div>
+                        <!--<asp:Button ID="btnLogin" runat="server" Text="Login" CssClass="btn-login" OnClick="btnLogin_Click" /> -->
+                        <button id="btnLogin" type="submit" class="btn-login">Login</button>
+                        <span class="msg-validation-login" style="color: red;">
+                            @Html.ValidationMessage("Login")
+                        </span>
+                    </div>
+                </form>
+                
+            </div>
+
+        </div>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+    </body>
+</html>

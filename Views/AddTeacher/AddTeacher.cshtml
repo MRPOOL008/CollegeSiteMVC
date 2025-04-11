@@ -1,0 +1,60 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <div class="addTeacher-container login-container">
+            <h2>Add Teacher</h2>
+            <div class="container">
+            <form asp-controller="AddTeacher" asp-action="AddTeacher" class="add-cotainer">
+                    <div class="txtBox-container">
+                        <label for="txtName">Name</label>
+                        <input type="text" id="txtName" name="Name" class="txtBox txt-name" placeholder="Enter Name" />
+                        <span class="msg-validation-name" style="color: red; display: none;">Please enter teacher name</span>
+                    </div>
+                    <div class="dtpDob-container">
+                        <label for="txtDob">DOB</label>
+                        <input type="date" id="txtDob" name="DOB" class="txtBox txt-name"/>
+                        <span class="msg-validation-dob" style="color: red; display: none;">Please enter teacher Date of birth</span>
+                    </div>
+                    <div class="gender-container">
+                        <label for="ddlGender">Gender</label>
+                        <select id="ddlGender" name="Gender" class="txtBox">
+                            <option>Male</option>
+                            <option>Female</option>
+                        </select>
+                    </div>
+                    <div class="txtMobile-container">
+                        <label for="txtMobile">Mobile</label>
+                        <input type="text" id="txtMobile" name="Mobile" class="txtBox txt-name" placeholder="Enter your mobile number" />
+                        <span class="msg-validation-mobile" style="color: red; display: none;">Please enter teacher mobile number</span>
+                    </div>
+                    <div class="txtEmail-container">
+                        <label for="txtEmail">Email</label>
+                        <input type="text" id="txtEmail" name="Email" class="txtBox txt-name" placeholder="Enter your Email" />
+                        <span class="msg-validation-email" style="color: red; display: none;">Please enter a proper teacher email</span>
+                    </div>
+                    <div class="txtPassword-container">
+                        <label for="txtPassword">Password</label>
+                        <input type="text" id="txtPassword" name="Password" class="txtBox txt-name" placeholder="Enter your password" />
+                        <span class="msg-validation-password" style="color: red; display: none;">Please enter a password</span>
+                    </div>
+                    <button id="btnAddTeacher" type="submit" class="btn-login btn-add">Add Teacher</button>
+                    <span class="msg-validation-addTeacher" style="color: red;">
+                        @Html.ValidationMessage("AddTeacher")
+                    </span>
+                    <div class="tbl-container">
+                        <!--<asp:GridView ID="tblAddTeacher" runat="server" CssClass="tbl tbl-addClass" EmptyDataText="No Record to display">
+                        </asp:GridView> -->
+                    </div>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
